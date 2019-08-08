@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+.fab {
+  border: 0;
+  width: 50px;
+  right: 10px;
+  bottom: 10px;
+  height: 50px;
+  color: #fff;
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 50%;
+  background: #c0392b;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.fab:hover {
+  color: #c0392b;
+  background: #fff;
+  box-shadow: 0 0 0 200px #c0392b;
+}
+
+.fab:hover::after {
+  right: 0;
+  width: 200px;
+  bottom: 100px;
+  color: #fff;
+  font-size: 22px;
+  text-align: right;
+  position: absolute;
+  content: attr(data-cr-text);
+}
