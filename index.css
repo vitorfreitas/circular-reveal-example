@@ -27,6 +27,12 @@
   box-shadow: 0 0 0 200px #c0392b;
 }
 
+.fab:hover span {
+  display: block;
+  animation-name: rotate;
+  animation-duration: 1s;
+}
+
 .fab:hover::after {
   right: 0;
   width: 200px;
@@ -36,4 +42,14 @@
   text-align: right;
   position: absolute;
   content: attr(data-cr-text);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
